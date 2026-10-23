@@ -1,0 +1,33 @@
+每次写代码前，同步 GitHub 最新版本：
+# 进入本地仓库
+cd "D:\sl\github\agent"
+
+# 查看当前状态
+git status
+
+# 将 GitHub main 分支的最新提交同步到本地
+git pull --ff-only origin main
+
+
+
+每次写完代码，上传到 GitHub：
+# 进入本地仓库
+cd "D:\sl\github\agent"
+
+# 查看修改了哪些文件
+git status
+
+# 将新增、修改、删除的文件变更加入暂存区
+git add .
+
+# 查看本次准备提交的文件及修改数量
+git diff --cached --stat
+
+# 保存一个本地版本，每次修改引号内的说明
+git commit -m "这里填写本次修改说明"
+
+# 上传到 GitHub
+git push origin main
+
+# 查看上传后的状态
+git status
